@@ -1,0 +1,15 @@
+.game-card-list{
+    display: flex;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        
+    }
+}

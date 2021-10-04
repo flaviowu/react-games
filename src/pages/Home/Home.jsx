@@ -1,26 +1,14 @@
-import React, { useState } from 'react'
-import { Api } from '../../Api/Api'
+import React from 'react'
+import GameList from '../../components/structure/GameList/GameList'
+
 
 const Home = () => {
-    const [games, setGames] = useState([])
-
-    const HandleRefreshData = async () => {
-        const response = await Api.getGames()
-        const data = await response.json()
-        setGames(data)
-        console.log(games)
-    }
-
 
     return (
         <div>
-            <h2 onClick={HandleRefreshData}>Página Home</h2>
-            <h3>Jogos</h3>
-            {games.map((game, index) => <div key={index}>
-                <h4>{game.title}</h4>
-                <p>{game.description}</p>
-                <img src={game.cover} alt={game.title}/>
-            </div>)}
+            <h2>Xbox Live Clone (with PS4 Games)</h2>
+            <h3>Games</h3>
+            <GameList/>
         </div>
     )
 }
